@@ -1,0 +1,15 @@
+
+:root {
+  --bg-primary: #315EDF; 
+  --text-primary: #FFFFFF;
+  
+  --bg-secondary: #F3F8FF; 
+  --text-secondary: #878787; 
+  
+  --bg-tertiary: #707faa;
+  --text-tertiary: #FFFFFF;
+  
+  --bg-body: #FFFFFF;
+  --text-body: #5a5a5a;
+  --text-header: #0B0D11;
+} 
