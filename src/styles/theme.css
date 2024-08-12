@@ -1,12 +1,12 @@
 
 :root {
-  --bg-primary: #315EDF; 
+  --bg-primary: #333; 
   --text-primary: #FFFFFF;
   
   --bg-secondary: #F3F8FF; 
   --text-secondary: #878787; 
   
-  --bg-tertiary: #707faa;
+  --bg-tertiary: #f58003;
   --text-tertiary: #FFFFFF;
   
   --bg-body: #FFFFFF;

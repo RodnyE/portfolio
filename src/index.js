@@ -4,6 +4,9 @@ import eruda from 'eruda'
 import { debug } from '@/utils/debug.js'
 import { createRoot } from 'react-dom/client';
 
+import aos from 'aos'
+
+import 'aos/dist/aos.css'
 import './styles/theme.css' 
 import './styles/main.css'
 import './styles/font.css'
@@ -19,3 +22,4 @@ window.debug = debug;
 // render
 const root = createRoot(document.getElementById('root'));
 root.render(<App/>);
+aos.init();

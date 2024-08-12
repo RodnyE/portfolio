@@ -1,9 +1,11 @@
 
 import { CSSTransition } from 'react-transition-group'
-import './SlideLeft.css'
+import './slide-left.css'
+import './slide-down.css'
 
-export function SlideLeft({
+export function Transition ({
   in: _in,
+  type = 'slide-left',
   timeout = 300,
   nodeRef,
   children,
@@ -14,7 +16,7 @@ export function SlideLeft({
       in={_in}
       timeout={timeout}
       nodeRef={nodeRef}
-      classNames='slideleft'
+      classNames={type}
       unmountOnExit={unmountOnExit}
     >
       {children}

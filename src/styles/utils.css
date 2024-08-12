@@ -6,6 +6,9 @@
 .bg-secondary {
   background: var(--bg-secondary);
 }
+.bg-tertiary {
+  background: var(--bg-tertiary);
+}
 .bg-body {
   background: var(--bg-body);
 }
@@ -19,6 +22,9 @@
 }
 .text-secondary {
   color: var(--text-secondary);
+}
+.text-tertiary-o {
+  color: var(--bg-tertiary);
 }
 .text-body {
   color: var(--text-body);
