@@ -29,8 +29,8 @@ export function CursorTarget ({position}) {
       else if (fl.y <= -5) fl.vy = 1;
       
       // render
-      let x = (lastPosition.x - 25);
-      let y = (lastPosition.y - 25) + fl.y;
+      let x = (lastPosition.x - 50);
+      let y = (lastPosition.y - 50) + fl.y;
       cursor.style.left = x + 'px';
       cursor.style.top = y + 'px'; 
     }

@@ -19,3 +19,13 @@ body,
   background: var(--bg-body);
   color: var(--text-body);
 }
+
+img {
+  user-select: none;
+}
+img:before,
+canvas:before {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}

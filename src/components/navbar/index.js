@@ -6,7 +6,7 @@ export function Navbar (props) {
       data-aos='fade-down'
     >
     <div className='relative text-primary w-full'>
-      { innerWidth < 760 ?
+      {/* innerWidth < 760 ?
         <>
           <svg className='absolute z-1 text-tertiary-o w-full' viewBox='0 0 200 70'>
             <polygon points='0,0 200,0 200,50 0,70' fill='currentColor'/>
@@ -16,14 +16,16 @@ export function Navbar (props) {
           </svg> 
         </>
         :
+      */}
+      {
         <div className='absolute w-full'>
           <div className='w-full h-16 bg-primary'/>
           <div className='w-full h-6 bg-tertiary'/>
         </div>
       }
-      <div className='w-full relative z-2 text-md flex p-6 space-x-4 items-center justify-center'> 
+      <div className='user-select-none w-full relative z-2 text-md flex p-6 space-x-4 items-center justify-center md:justify-end'> 
       {
-        ['Resumen', 'Tecnologias', 'Contactame'].map((text, i) => (
+        ['Tecnologias', 'Contactame'].map((text, i) => (
           <div
             key={i}
             data-aos='zoom-in-down'

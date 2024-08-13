@@ -1,9 +1,8 @@
 
-import { useEffect } from 'react'
-import { Route, Switch } from 'wouter' 
+import { useEffect } from 'react' 
 import { useLoadedPage } from './utils/store'
-import { LoadingPage } from './pages/loading'
-import { HomePage } from './pages/home'
+import { LoadingPage } from './features/loading'
+import { HomePage } from './features/home'
 
 export default function App () {
   const [loaded, setLoaded] = useLoadedPage();
