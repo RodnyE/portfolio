@@ -1,5 +1,4 @@
 
-import { useLoadedPage } from '@/utils/store'
 import { Loader, Transition } from '@/components'
 
 export function LoadingPage ({show}) {

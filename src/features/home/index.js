@@ -1,19 +1,33 @@
 
 import { useState, useEffect } from 'react'
 import { Transition, Button, Navbar, Footer } from '@/components'
-import { H1, LineText, HabilityText } from './components'
+import { H1, LineText, HabilityCard, TechCard } from './components'
 import { PetRobot } from '@/components/pet'
 import { CursorTarget } from '@/components/cursor'
 
-import heroSrc from '@/assets/hero.png'
-import icon01Src from '@/assets/icon-01.png'
-import icon02Src from '@/assets/icon-02.png'
-import icon03Src from '@/assets/icon-03.png'
-import icon04Src from '@/assets/icon-04.png'
-import icon05Src from '@/assets/icon-05.png'
-import contributionsSrc from '@/assets/contributions.svg'
+import heroImg from '@/assets/hero.png'
+import contributionsImg from '@/assets/contributions.svg'
 import cvPdf from '@/assets/CV.pdf'
 
+import { techImgs, habilityImgs } from '@/utils/icons' 
+
+const techs = [
+  { icon: techImgs.react, title: 'React' },
+  { icon: techImgs.angular, title: 'Angular' },
+  { icon: techImgs.vue, title: 'Vue' }, 
+
+  { icon: techImgs.bootstrap, title: 'Bootstrap' }, 
+  { icon: techImgs.tailwind, title: 'Tailwind CSS' },
+
+  { icon: techImgs.node, title: 'Node.js' },
+  { icon: techImgs.typescript, title: 'TypeScript' },
+  { icon: techImgs.mongo, title: 'MongoDB' },
+  { icon: techImgs.postgresql, title: 'PostgreSQL' },
+
+  { icon: techImgs.docker, title: 'Docker' }, 
+  { icon: techImgs.git, title: 'Git' }, 
+  { icon: techImgs.python, title: 'Python' }, 
+]
 
 export function HomePage({ show }) {
   const [showPage, setShowPage] = useState(false);
@@ -49,10 +63,10 @@ export function HomePage({ show }) {
 
             <div className='flex flex-col'>
               <H1> Hola ! </H1>
-              <LineText> 
-                Me llamo 
-                <span className='text-tertiary-o'> Rodny Estrada </span>, 
-                soy programador fullstack 
+              <LineText>
+                Me llamo
+                <span className='text-tertiary-o'> Rodny Estrada </span>,
+                soy programador fullstack
               </LineText>
 
               <div className='flex self-start m-4 space-x-3 text-xl'>
@@ -60,15 +74,15 @@ export function HomePage({ show }) {
                   href={cvPdf}
                   download='rodny_cv.pdf'
                   children='Descargar CV'
-                /> 
-                <Button 
+                />
+                <Button
                   href='https://github.com/RodnyE'
                   children='Github'
-                /> 
+                />
               </div>
             </div>
 
-            <img className='max-w-xl hidden lg:inline' src={contributionsSrc}/>
+            <img className='max-w-xl hidden lg:inline' src={contributionsImg} />
           </div>
 
 
@@ -76,7 +90,7 @@ export function HomePage({ show }) {
 
             <img
               className='md:my-6 w-full max-w-md'
-              src={heroSrc}
+              src={heroImg}
             />
 
             <LineText>
@@ -85,13 +99,34 @@ export function HomePage({ show }) {
             </LineText>
           </div>
 
-          <H1> Capacidades </H1>
-          <div className='flex flex-wrap justify-center md:justify-start m-3'>
-            <HabilityText iconSrc={icon04Src} header='Backend & Frontend' content='Poder con el ecosistema de Javascript para el desarrollo de aplicaciones web/móviles/escritorio/servidores' />
-            <HabilityText iconSrc={icon02Src} header='Nube' content='Conocimientos en el despliegue de aplicaciones basadas en la nube [AWS y Azure principalmente].' />
-            <HabilityText iconSrc={icon03Src} header='Dev-ops' content='Es importante la comunicación con el equipo de desarrollo. Buenos métodos de documentacion de código y buenas prácticas son clave.' />
-            <HabilityText iconSrc={icon01Src} header='Optimización' content='Mi enfoque se basa principalmente en la optimización y la eficiencia, permitiendome construir aplicaciones robustas y escalables.' />
-            <HabilityText iconSrc={icon05Src} header='Aprendizaje continuo' content='Me mantengo actualizado con las últimas tendencias y tecnologías en el mundo del desarrollo web, siempre buscando nuevas formas de mejorar mis habilidades.' />
+          <div className='my-3 flex flex-col'>
+            <H1> Capacidades </H1>
+            <div className='flex flex-wrap justify-center md:justify-start m-3'>
+              <HabilityCard iconSrc={habilityImgs[0]} header='Backend & Frontend' content='Poder con el ecosistema de Javascript para el desarrollo de aplicaciones web/móviles/escritorio/servidores' />
+              <HabilityCard iconSrc={habilityImgs[1]} header='Nube' content='Conocimientos en el despliegue de aplicaciones basadas en la nube [AWS y Azure principalmente].' />
+              <HabilityCard iconSrc={habilityImgs[2]} header='Dev-ops' content='Es importante la comunicación con el equipo de desarrollo. Buenos métodos de documentacion de código y buenas prácticas son clave.' />
+              <HabilityCard iconSrc={habilityImgs[3]} header='Optimización' content='Mi enfoque se basa principalmente en la optimización y la eficiencia, permitiendome construir aplicaciones robustas y escalables.' />
+              <HabilityCard iconSrc={habilityImgs[4]} header='Aprendizaje continuo' content='Me mantengo actualizado con las últimas tendencias y tecnologías en el mundo del desarrollo web, siempre buscando nuevas formas de mejorar mis habilidades.' />
+            </div>
+          </div>
+
+          <div className='my-3 flex flex-col'>
+            <H1> Tecnologías </H1>
+            <div className='flex flex-wrap justify-center md:justify-start m-3'>
+              {
+                techs.map((tech, i) => (
+                  <TechCard key={i} iconSrc={tech.icon} header={tech.title}/>
+                ))
+              }
+            </div>
+          </div>
+
+          <div className='flex flex-col'>
+            <H1> Contáctame </H1>
+            <div className='flex flex-wrap justify-center md:justify-start m-3'>
+              
+              
+            </div>
           </div>
         </div>
         <Footer />
@@ -100,7 +135,7 @@ export function HomePage({ show }) {
         <PetRobot watchPosition={pointer} />
         <CursorTarget position={pointer} />
       </div>
-    </Transition>
+    </Transition >
 
   )
 }

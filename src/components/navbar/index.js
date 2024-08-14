@@ -25,7 +25,7 @@ export function Navbar (props) {
       }
       <div className='user-select-none w-full relative z-2 text-md flex p-6 space-x-4 items-center justify-center md:justify-end'> 
       {
-        ['Tecnologias', 'Contactame'].map((text, i) => (
+        ['Tecnologías', 'Contáctame'].map((text, i) => (
           <div
             key={i}
             data-aos='zoom-in-down'

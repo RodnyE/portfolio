@@ -12,7 +12,9 @@ body,
   height: 100%;
   cursor: auto;
 }
-
+html {
+  overflow-x: hidden;
+}
 #root {
   font-family: "Sora", Sans-Serif; 
   box-sizing: border-box;
@@ -22,10 +24,4 @@ body,
 
 img {
   user-select: none;
-}
-img:before,
-canvas:before {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
+} 
