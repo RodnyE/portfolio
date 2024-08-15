@@ -12,8 +12,7 @@ body,
   height: 100%;
   cursor: auto;
 }
-html {
-  overflow-x: hidden;
+body { 
   background: var(--bg-body);
 }
 #root {

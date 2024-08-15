@@ -19,7 +19,7 @@ export function WelcomeSection() {
             soy programador fullstack
           </LineText>
 
-          <div className='flex self-start m-4 space-x-3 text-xl'>
+          <div className='flex self-start m-4 text-xl flex-wrap'>
             <ModernButton
               href={cvPdf}
               download='rodny_cv.pdf'

@@ -11,7 +11,6 @@ export function Transition ({
   children,
   unmountOnExit = true,
 }) {
-  console.log(children)
   return (
     <CSSTransition
       in={_in}

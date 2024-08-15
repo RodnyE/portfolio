@@ -1,21 +1,23 @@
-
-import { useState, useEffect } from 'react'
-import { Transition, Navbar, Footer } from '@/components'
-import { PetRobot } from '@/components/pet'
-import { CursorTarget } from '@/components/cursor'
-import { WelcomeSection, HabilitySection, TechSection, ContactSection } from './sections'
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Transition, Navbar, Footer } from '@/components';
+import { PetRobot } from '@/components/pet';
+import { CursorTarget } from '@/components/cursor';
+import { WelcomeSection, HabilitySection, TechSection, ContactSection } from './sections';
 
 export function HomePage({ show }) {
+  const isTouchDevice = useMediaQuery({ query: '(pointer: coarse)' });
   const [showPage, setShowPage] = useState(false);
-  const [pointer, setPointer] = useState({ x: 0, y: 0 })
+  const [pointer, setPointer] = useState({ x: 0, y: 0 });
   const handlePointer = e => {
     if (e.targetTouches) e = e.targetTouches[0];
 
     setPointer({
       x: e.clientX,
       y: e.clientY,
-    })
-  }
+    });
+  };
+
 
   // force delay 
   useEffect(() => {
@@ -43,8 +45,8 @@ export function HomePage({ show }) {
 
         {/** Extras **/}
         <PetRobot watchPosition={pointer} />
-        <CursorTarget position={pointer} />
+        {!isTouchDevice && <CursorTarget position={pointer} />}
       </div>
     </Transition> 
-  )
+  );
 }

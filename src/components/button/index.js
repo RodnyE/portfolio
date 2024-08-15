@@ -35,8 +35,8 @@ export function SendButton({ icon, href, children, onClick }) {
 export function ModernButton({ className, children, href, download }) {
   return (
     <a
-      className={modernStyles.animated_button}
-      data-aos='fade-left'
+      className={'m-1 ' + modernStyles.animated_button}
+      data-aos='fade-right'
       data-aos-delay='200'
       href={href}
       download={download}

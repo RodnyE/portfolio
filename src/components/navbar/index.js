@@ -4,6 +4,7 @@ export function Navbar(props) {
   return (
     <div
       data-aos='fade-down'
+      className='flex justify-between items-center w-full bg-white shadow-md'
     >
       <div className='text-primary w-full'>
         <div className='w-full bg-primary'>

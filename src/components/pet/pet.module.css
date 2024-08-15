@@ -1,16 +1,22 @@
-
 .pet {
+    --scale: scale(1);
+    cursor: pointer;
     position: fixed;
     bottom: 0;
     right: 0;
     animation: float 1s ease-in-out alternate infinite;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pet:hover {
+    --scale: scale(0.9);
 }
 
 @keyframes float {
     from {
-        transform: translateY(-10%);
+        transform: translateY(-10%) var(--scale);
     }
     to {
-        transform: translateY(0%);
+        transform: translateY(0%) var(--scale);
     }
 }
