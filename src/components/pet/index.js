@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+
+import { useState, useEffect, useRef } from 'react'
+import styles from './pet.module.css'
 import eyeSrc from '@/assets/robot-eye.png'
 import headSrc from '@/assets/robot-head.png'
 const { PI } = Math;
@@ -79,6 +81,11 @@ export function PetRobot ({watchPosition}) {
   }, [])
 
   return (
-    <canvas ref={canvasRef} width={robot.width} height={robot.width} style={{position: 'fixed', right: 0, bottom: 0}} />
+    <canvas 
+      ref={canvasRef} 
+      width={robot.width} 
+      height={robot.width}
+      className={styles.pet}  
+    />
   )
 }

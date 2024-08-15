@@ -14,11 +14,11 @@ body,
 }
 html {
   overflow-x: hidden;
+  background: var(--bg-body);
 }
 #root {
   font-family: "Sora", Sans-Serif; 
   box-sizing: border-box;
-  background: var(--bg-body);
   color: var(--text-body);
 }
 

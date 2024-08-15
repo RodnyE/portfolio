@@ -1,0 +1,35 @@
+/* From Uiverse.io by tiagoadag1203 */ 
+.input { 
+    background-color: var(--bg-body);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--text-body);
+    transition:all 0.3s
+  }
+  
+  .input:focus, 
+  input.input:not([value='']),
+  textarea.input:not(:empty) {
+    animation: rotateShadow 2s infinite linear;
+  }
+  
+  @keyframes rotateShadow {
+    0% {
+      box-shadow: -5px -5px 0px 0px var(--bg-tertiary), 5px 5px 0px 0px var(--bg-primary);
+    }
+    25% {
+      box-shadow: -5px 5px 0px 0px var(--bg-tertiary), 5px -5px 0px 0px var(--bg-primary);
+    }
+    50% {
+      box-shadow: 5px 5px 0px 0px var(--bg-tertiary), -5px -5px 0px 0px var(--bg-primary);
+    }
+    75% {
+      box-shadow: 5px -5px 0px 0px var(--bg-tertiary), -5px 5px 0px 0px var(--bg-primary);
+    }
+    100% {
+      box-shadow: -5px -5px 0px 0px var(--bg-tertiary), 5px 5px 0px 0px var(--bg-primary);
+    }
+  }
+  
